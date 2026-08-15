@@ -1,0 +1,5 @@
+model,display_name,bleu,test_sentences_per_second
+additive_attention,Encoder-Decoder + Additive (Bahdanau) Attention,26.33707369710506,712.6697257363444
+multiplicative_attention,Encoder-Decoder + Multiplicative (Luong) Attention,13.40976177057015,1896.4557747278734
+encoder_decoder,GRU Encoder-Decoder (no attention),11.021904646326442,2340.918255466979
+rnn_seq2seq,Vanilla RNN Seq2Seq (no attention),2.62312547064354,2895.570939798029

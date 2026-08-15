@@ -99,11 +99,26 @@ python translate.py --model additive_attention --interactive
 
 ## Results
 
-See `results/metrics/comparison.csv` and `results/plots/` for the full numbers and plots. Summary:
+See `results/metrics/comparison.csv` and `results/plots/` for the full numbers and plots. Summary (test-set BLEU, 2,000 held-out sentence pairs, greedy decoding):
 
-<!-- RESULTS_TABLE_PLACEHOLDER -->
+| # | Model | BLEU | Inference speed (sent/s) |
+|---|-------|-----:|--------------------------:|
+| 1 | Vanilla RNN Seq2Seq (no attention) | 2.62 | 2895.6 |
+| 2 | GRU Encoder-Decoder (no attention) | 11.02 | 2340.9 |
+| 3 | Encoder-Decoder + Multiplicative (Luong) Attention | 13.41 | 1896.5 |
+| 4 | Encoder-Decoder + Additive (Bahdanau) Attention | **26.34** | 712.7 |
 
-Full discussion of these results (why attention helps, where each model breaks down, qualitative error analysis) is in the report under `report/`.
+![Loss curves](results/plots/loss_curves.png)
+![BLEU comparison](results/plots/bleu_comparison.png)
+
+**Takeaways:**
+
+- Gating alone (Model 1 → Model 2, plain RNN → GRU) more than **quadruples** BLEU, confirming that vanishing gradients / limited memory are a real bottleneck for the vanilla RNN on even fairly short (≤12-word) sentences.
+- Attention (Model 2 → Models 3/4) gives another large jump, because the decoder no longer has to compress the whole sentence into a single fixed-length vector — it can look back at the relevant source words directly.
+- The additive-attention model outperforms the multiplicative one here, but the comparison isn't perfectly isolated: the additive model uses a **bidirectional** encoder (as in Bahdanau et al.) while the multiplicative model uses a **unidirectional** encoder (as in Luong et al.), matching each paper's original design. Some of the additive model's advantage is therefore likely coming from the bidirectional encoder having access to right-context, not purely from the attention scoring function. This trade-off is discussed further in the report.
+- Unsurprisingly, the extra attention computation makes inference slower — the additive model translates the test set at roughly a quarter of the vanilla RNN's throughput.
+
+Full discussion of these results (why attention helps, where each model breaks down, qualitative error analysis, and the encoder-direction caveat above) is in the report under `report/`.
 
 ## Acknowledgements
 

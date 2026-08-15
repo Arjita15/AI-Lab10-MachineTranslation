@@ -1,0 +1,77 @@
+[
+  {
+    "source": "tom has a house .",
+    "reference": "tom a une maison .",
+    "prediction": "tom a un <unk> ."
+  },
+  {
+    "source": "could you turn down the tv ?",
+    "reference": "pourriez vous baisser le son du téléviseur ?",
+    "prediction": "pourriez vous le la ? ?"
+  },
+  {
+    "source": "i heard the song sung in french .",
+    "reference": "j'ai entendu cette chanson en version française .",
+    "prediction": "j'ai entendu la <unk> de la <unk> ."
+  },
+  {
+    "source": "you're giving me the creeps .",
+    "reference": "tu me fais froid dans le dos .",
+    "prediction": "tu <unk> le <unk> ."
+  },
+  {
+    "source": "it's not as scary as you think .",
+    "reference": "ça ne fait pas aussi peur que tu le penses .",
+    "prediction": "ce n'est pas que que vous <unk> ."
+  },
+  {
+    "source": "do you really think that it's bad ?",
+    "reference": "penses tu vraiment que cela soit mauvais ?",
+    "prediction": "penses tu que que ça soit vraiment ? ?"
+  },
+  {
+    "source": "make me happy .",
+    "reference": "rendez moi heureux .",
+    "prediction": "donne moi ."
+  },
+  {
+    "source": "i need something to write with .",
+    "reference": "je veux un truc pour écrire .",
+    "prediction": "il me faut quelque chose à quelque chose ."
+  },
+  {
+    "source": "she seems rich .",
+    "reference": "elle semble riche .",
+    "prediction": "elle a <unk> ."
+  },
+  {
+    "source": "will you take the job ?",
+    "reference": "allez vous prendre le poste ?",
+    "prediction": "<unk> tu le la ?"
+  },
+  {
+    "source": "i'll choose one .",
+    "reference": "je vais en choisir un .",
+    "prediction": "je vais ."
+  },
+  {
+    "source": "stop playing hard to get .",
+    "reference": "cessez de faire ceux qui ne sont pas intéressés !",
+    "prediction": "arrêtez de te <unk> à . ."
+  },
+  {
+    "source": "it's a parody .",
+    "reference": "c'est une parodie .",
+    "prediction": "c'est un <unk> ."
+  },
+  {
+    "source": "only you answered the question .",
+    "reference": "tu es le seul à avoir répondu à la question .",
+    "prediction": "<unk> vous à la maison ."
+  },
+  {
+    "source": "if i were you , i wouldn't hesitate .",
+    "reference": "à ta place , je n'hésiterais pas .",
+    "prediction": "si j'étais , , je <unk> , je <unk> ."
+  }
+]
