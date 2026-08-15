@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# raw dataset is large and easy to re-download, don't commit it
+data/raw/*.zip
+data/raw/fra.txt
+data/raw/_about.txt
+
+# derived from data/raw + preprocess.py (deterministic given the fixed seed), regenerate instead of committing
+data/processed/*.pkl
+
+*.log
+
+# trained weights are large binaries, regenerate via train_all.py instead
+checkpoints/*.pt
+
+.DS_Store
