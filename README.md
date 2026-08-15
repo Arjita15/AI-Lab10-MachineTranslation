@@ -1,7 +1,7 @@
 # Comparative Analysis of Machine Translation Models
 
 **Course:** Artificial Intelligence (AI), BCT 2080, Advanced College of Engineering and Management (ACEM), Tribhuvan University
-**Student:** Arjita | Roll No. ACE080BCT015 | 6th Semester, Computer Engineering
+**Student:** Arjita Yadav | Roll No. ACE080BCT015 | 6th Semester, Computer Engineering
 **Assignment:** Lab 10 (A1) — Comparative Analysis of Machine Translation Models
 
 ## Overview
