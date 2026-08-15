@@ -124,4 +124,4 @@ Full discussion of these results (why attention helps, where each model breaks d
 
 - Dataset: [ManyThings.org/Anki](https://www.manythings.org/anki/) (sentence pairs from the [Tatoeba Project](https://tatoeba.org/), CC-BY 2.0 France).
 - Architectures follow Sutskever et al. (2014) *Sequence to Sequence Learning with Neural Networks*, Bahdanau et al. (2015) *Neural Machine Translation by Jointly Learning to Align and Translate*, and Luong et al. (2015) *Effective Approaches to Attention-based Neural Machine Translation*.
-- Implemented in PyTorch as part of the AI course (BCT 2080) assignment at ACEM. I used an AI assistant (Claude) to help design/debug the training pipeline and draft documentation, as permitted by the assignment instructions; all experiments were run and results verified by me.
+- Implemented in PyTorch as part of the AI course (BCT 2080) assignment at ACEM. 
