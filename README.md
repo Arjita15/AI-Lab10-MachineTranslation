@@ -13,7 +13,7 @@ This project implements and compares four neural machine translation (NMT) archi
 3. **Encoder-Decoder + Additive (Bahdanau) Attention** — a bidirectional GRU encoder whose outputs at *every* time step are kept, plus an additive/MLP-style attention mechanism so the decoder can look back at different parts of the source sentence at each generation step.
 4. **Encoder-Decoder + Multiplicative (Luong) Attention** — same idea as (3), but the alignment score between decoder and encoder states is a bilinear/dot-product ("multiplicative") operation instead of a small feed-forward network, computed *after* the decoder's recurrent step rather than before.
 
-All four models are trained from scratch (no pretrained embeddings) under identical data, splits, and hyperparameters so the only thing that changes between runs is the architecture itself.
+All four models are trained from scratch  under identical data, splits, and hyperparameters so the only thing that changes between runs is the architecture itself.
 
 > **Note on the "RNN" vs. "Encoder-Decoder" naming in the assignment:** since every encoder-decoder model is technically built from RNN cells, Model 1 is implemented with plain (`nn.RNN`, tanh) cells to represent "RNN" specifically, while Models 2–4 use GRU cells, which is the standard choice for encoder-decoder NMT. This lets the comparison isolate two effects: gating (Model 1 → Model 2) and attention, additive vs. multiplicative (Model 2 → Models 3/4).
 
